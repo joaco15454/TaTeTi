@@ -68,12 +68,15 @@ i {
 }
 .game_main {
     width: 30%;
-    display: flex;
+    /*display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 2em;
     gap: 20px;
+    place-content: center;
 }
 .box {
     background-color: var(--black);
