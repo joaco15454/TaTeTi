@@ -44,6 +44,9 @@ const playerHasWon = () => {
     return false
 }
 const boxClicked = (e)=> {
+    if (playerHasWon() !==false ) {
+        return
+    }
     const idElement = e.target.id
     if (!spaces[idElement]) {
         spaces [idElement] = currentPlayer //Basicamente llenamos el array con X o O
@@ -53,7 +56,7 @@ const boxClicked = (e)=> {
             let winningBlock = playerHasWon()
             winningBlock.map( block => boxGame[block].style.backgroundColor = winnerIndicator)
         }
-        if (e.target.innerText === O_TEXT) { //Para agregar el color a las letras
+        if (currentPlayer === O_TEXT) { //Para agregar el color a las letras
             e.target.classList.add(O_TEXT)
         } else {
             e.target.classList.add(X_TEXT)
@@ -64,13 +67,14 @@ const boxClicked = (e)=> {
 
 }
 const restartTheGame = () => {
-    
+    currentPlayer = X_TEXT
+    turnPlayer.innerText= currentPlayer
     spaces.fill(null)
     boxGame.forEach(box => {
         box.innerText = ""
         box.style.backgroundColor ="var(--black)"
     })
-    currentPlayer = X_TEXT
+    
     title.innerText = `TaTeTi!`
 }
 const init = () => {    
