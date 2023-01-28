@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b0d5a1a1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <div class="main_container">
+            <h1 class="title">
+                TaTeTi
+            </h1>
+            <div class="game_settings">
+                <span class="XO"><p class="X">X</p><p class="O">O</p></span>
+                <div class="turn"><span id="turnPlayer">X</span><p>TURN</p></div>
+                <button class="restart"><i class="fa-solid fa-rotate-left"></i></button>
+            </div>
+            <div class="game_main">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="mensaje_ganador oculto">
+            <p class="text_win">
+                ¡Felicidades! El jugador<span class="name_winner" >Joaquin </span> ha ganado
+            </p>
+        </div>
+    </article>
+<script src="./main.js"></script>
+</body>
+</html>

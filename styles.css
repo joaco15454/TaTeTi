@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+:root {
+    --purple:#bf81e1;
+    --black:#141414;
+    --grey:#4d4d4d;
+    --greyWhite: #c7b9c5;
+    --gold: gold;
+    --blackGreen: #4b957c;
+    --cyan : cyan;
+}
+body {
+    background-color: var(--purple);
+    
+}
+.main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.game_settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7em;
+}
+.turn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 150px;
+    height: 50px;
+    background-color:var(--grey) ;
+    border-radius: 15px;
+    -webkit-box-shadow: 6px 9px 5px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 9px 5px -5px rgba(0,0,0,0.75);
+    box-shadow: 6px 9px 5px -5px rgba(0,0,0,0.75);
+}
+span {
+    font-size: 40px;
+}
+.restart {
+    height: 50px;
+    width: 50px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--greyWhite);
+    cursor: pointer;
+
+}
+.title {
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: #c8f48f;
+}
+i {
+    font-size: 25px;
+}
+.XO {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.game_main {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    gap: 20px;
+}
+.box {
+    background-color: var(--black);
+    height: 150px;
+    color: red;
+    font-size: 120px;
+    width: 150px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)
+}
+.X {
+    color: var(--gold);
+}
+.O {
+    color: var(--blackGreen);
+}
+
+/* MENSAJE GANADOR*/
+.mensaje_ganador {
+    position: absolute;
+    left: 0%;
+    top: 40%;
+    height: 20vh;
+    right: 50%;
+    width: 100%;
+    background-color: #4b957c;
+}
+.text_win {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    gap: 10px;
+}
+.name_winner {
+    font-size: 50px;
+}
+.oculto {
+    display: none;
+}
